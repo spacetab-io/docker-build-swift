@@ -41,11 +41,5 @@ We use GitHub issues to track public bugs. Report a bug by [opening a new issue]
 
 People *love* thorough bug reports. I'm not even kidding.
 
-## Use a Consistent Coding Style
-
-Coding style must be follow up PSR-1 and PSR-2 recommendations.
-https://www.php-fig.org/psr/psr-1/
-https://www.php-fig.org/psr/psr-2/
-
 ## License
 By contributing, you agree that your contributions will be licensed under its GNU GPL v3.
