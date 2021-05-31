@@ -42,7 +42,7 @@ Docker image configured for <a href="https://swift.org/">Swift</a> in production
 ## Basic usage
 
 ```Dockerfile
-FROM spacetabio/docker-base-swift:5.3-1.0.1
+FROM spacetabio/docker-base-swift:5.4-1.0.0
 
 COPY . /app
  
@@ -50,7 +50,7 @@ CMD ["something_binary_to_run"]
 
 ## or build image
 
-FROM spacetabio/docker-build-swift:5.3-1.0.1
+FROM spacetabio/docker-build-swift:5.4-1.0.0
 
 COPY . /app
  
@@ -58,7 +58,7 @@ CMD ["something_binary_to_run"]
 
 ## or lint image
 
-FROM spacetabio/docker-lint-swift:5.3-1.0.2
+FROM spacetabio/docker-lint-swift:5.4-1.0.0
 
 COPY . /app
  
@@ -66,7 +66,7 @@ CMD ["something_binary_to_run"]
 
 ## or test image
 
-FROM spacetabio/docker-test-swift:5.3-1.0.1
+FROM spacetabio/docker-test-swift:5.4-1.0.0
 
 COPY . /app
  
