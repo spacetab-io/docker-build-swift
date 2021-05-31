@@ -8,23 +8,25 @@ Docker image configured for <a href="https://swift.org/">Swift</a> in production
 
 ## Docker images
 
-* `spacetabio/docker-base-swift:5.3-1.0.0` – A base image for all images below. <br>
+`Swift 5.3`
+
+* `spacetabio/docker-base-swift:5.3-1.0.1` – A base image for all images below. <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-base-swift/5.3-1.0.0?style=flat-square)
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-base-swift/5.3-1.0.0?style=flat-square)
-* `spacetabio/docker-build-swift:5.3-1.0.0` – Image to build sources. <br>
+* `spacetabio/docker-build-swift:5.3-1.0.1` – Image to build sources. <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-build-swift/5.3-1.0.0?style=flat-square)
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-build-swift/5.3-1.0.1?style=flat-square)
-* `spacetabio/docker-lint-swift:5.3-1.0.1` – Image to lint sources. Uses [swiftlint](https://github.com/realm/SwiftLint). <br>
+* `spacetabio/docker-lint-swift:5.3-1.0.2` – Image to lint sources. Uses [swiftlint](https://github.com/realm/SwiftLint). <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-lint-swift/5.3-1.0.1?style=flat-square)
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-lint-swift/5.3-1.0.0?style=flat-square)
-* `spacetabio/docker-test-swift:5.3-1.0.0` – Image to test sources. <br>
+* `spacetabio/docker-test-swift:5.3-1.0.1` – Image to test sources. <br>
 ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-test-swift/5.3-1.0.0?style=flat-square)
 ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-test-swift/5.3-1.0.0?style=flat-square)
 
 ## Basic usage
 
 ```Dockerfile
-FROM spacetabio/docker-base-swift:5.3-1.0.0
+FROM spacetabio/docker-base-swift:5.3-1.0.1
 
 COPY . /app
  
@@ -32,7 +34,7 @@ CMD ["something_binary_to_run"]
 
 ## or build image
 
-FROM spacetabio/docker-build-swift:5.3-1.0.0
+FROM spacetabio/docker-build-swift:5.3-1.0.1
 
 COPY . /app
  
@@ -40,7 +42,7 @@ CMD ["something_binary_to_run"]
 
 ## or lint image
 
-FROM spacetabio/docker-lint-swift:5.3-1.0.0
+FROM spacetabio/docker-lint-swift:5.3-1.0.2
 
 COPY . /app
  
@@ -48,7 +50,7 @@ CMD ["something_binary_to_run"]
 
 ## or test image
 
-FROM spacetabio/docker-test-swift:5.3-1.0.0
+FROM spacetabio/docker-test-swift:5.3-1.0.1
 
 COPY . /app
  
