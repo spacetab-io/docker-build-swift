@@ -1,4 +1,4 @@
-FROM swift:5.6-focal-slim
+FROM swift:5.6-focal
 
 # Install OS updates and, if needed, sqlite3
 RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true \
