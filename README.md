@@ -8,41 +8,26 @@ Docker image configured for <a href="https://swift.org/">Swift</a> in production
 
 ## Docker images
 
-`Swift 5.4`
+`Swift 5.6`
 
-* `spacetabio/docker-base-swift:5.4-1.1.0` – A base image for all images below. <br>
-  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-base-swift/5.4-1.1.0?style=flat-square)
-  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-base-swift/5.4-1.1.0?style=flat-square)
-* `spacetabio/docker-build-swift:5.4-1.1.0` – Image to build sources. <br>
-  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-build-swift/5.4-1.1.0?style=flat-square)
-  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-build-swift/5.4-1.1.0?style=flat-square)
-* `spacetabio/docker-lint-swift:5.4-1.1.0` – Image to lint sources. Uses [swiftlint](https://github.com/realm/SwiftLint). <br>
-  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-lint-swift/5.4-1.1.0?style=flat-square)
-  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-lint-swift/5.4-1.1.0?style=flat-square)
-* `spacetabio/docker-test-swift:5.4-1.1.0` – Image to test sources. <br>
-  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-test-swift/5.4-1.1.0?style=flat-square)
-  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-test-swift/5.4-1.1.0?style=flat-square)
+* `spacetabio/docker-base-swift:5.6-1.2.0` – A base image for all images below. <br>
+  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-base-swift/5.6-1.2.0?style=flat-square)
+  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-base-swift/5.6-1.2.0?style=flat-square)
+* `spacetabio/docker-build-swift:5.6-1.2.0` – Image to build sources. <br>
+  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-build-swift/5.6-1.2.0?style=flat-square)
+  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-build-swift/5.6-1.2.0?style=flat-square)
+* `spacetabio/docker-lint-swift:5.6-1.2.0` – Image to lint sources. Uses [swiftlint](https://github.com/realm/SwiftLint). <br>
+  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-lint-swift/5.6-1.2.0?style=flat-square)
+  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-lint-swift/5.6-1.2.0?style=flat-square)
+* `spacetabio/docker-test-swift:5.6-1.2.0` – Image to test sources. <br>
+  ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-test-swift/5.6-1.2.0?style=flat-square)
+  ![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-test-swift/5.6-1.2.0?style=flat-square)
 
-
-`Swift 5.3`
-
-* `spacetabio/docker-base-swift:5.3-1.0.1` – A base image for all images below. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-base-swift/5.3-1.0.1?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-base-swift/5.3-1.0.1?style=flat-square)
-* `spacetabio/docker-build-swift:5.3-1.0.1` – Image to build sources. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-build-swift/5.3-1.0.1?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-build-swift/5.3-1.0.1?style=flat-square)
-* `spacetabio/docker-lint-swift:5.3-1.0.2` – Image to lint sources. Uses [swiftlint](https://github.com/realm/SwiftLint). <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-lint-swift/5.3-1.0.2?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-lint-swift/5.3-1.0.2?style=flat-square)
-* `spacetabio/docker-test-swift:5.3-1.0.1` – Image to test sources. <br>
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/spacetabio/docker-test-swift/5.3-1.0.1?style=flat-square)
-![Docker Image Version (tag latest semver)](https://img.shields.io/docker/v/spacetabio/docker-test-swift/5.3-1.0.1?style=flat-square)
 
 ## Basic usage
 
 ```Dockerfile
-FROM spacetabio/docker-base-swift:5.4-1.0.0
+FROM spacetabio/docker-base-swift:5.6-1.2.0
 
 COPY . /app
  
@@ -50,15 +35,15 @@ CMD ["something_binary_to_run"]
 
 ## or build image
 
-FROM spacetabio/docker-build-swift:5.4-1.0.0
+FROM spacetabio/docker-build-swift:5.6-1.2.0
 
 COPY . /app
  
 CMD ["something_binary_to_run"]
 
-## or lint image
+## or lint image (temporary not available for 5.6 version)
 
-FROM spacetabio/docker-lint-swift:5.4-1.0.0
+FROM spacetabio/docker-lint-swift:5.6-1.2.0
 
 COPY . /app
  
@@ -66,7 +51,7 @@ CMD ["something_binary_to_run"]
 
 ## or test image
 
-FROM spacetabio/docker-test-swift:5.4-1.0.0
+FROM spacetabio/docker-test-swift:5.6-1.2.0
 
 COPY . /app
  
@@ -88,7 +73,7 @@ CMD ["something_binary_to_run"]
 
 The MIT License
 
-Copyright © 2021 spacetab.io, Inc. https://spacetab.io
+Copyright © 2022 spacetab.io, Inc. https://spacetab.io
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
